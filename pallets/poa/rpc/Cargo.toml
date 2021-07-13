@@ -11,8 +11,8 @@ jsonrpc-core-client = "15.1.0"
 jsonrpc-derive = "15.1.0"
 
 # Substrate primitives
-sp-api = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.3" }
-sp-blockchain = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.3" }
-sp-runtime = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.3" }
+sp-api = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.7" }
+sp-blockchain = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.7" }
+sp-runtime = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.7" }
 
 pallet-poa-rpc-runtime-api = { path = "./runtime-api" }

@@ -1,11 +1,11 @@
 [workspace]
 members = [
-#  "bin/node",
+  "bin/node",
   "bin/node-prep",
   "bin/node-prep/executor",
   "bin/node-dev",
   
-#  "runtime/jupiter-para",
+  "runtime/jupiter",
   "runtime/jupiter-prep",
   "runtime/jupiter-dev",
 

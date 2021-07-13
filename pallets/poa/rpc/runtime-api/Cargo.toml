@@ -8,9 +8,9 @@ edition = "2018"
 codec = { package = "parity-scale-codec", version = "2.1.0", default-features = false }
 
 # Substrate primitives
-sp-api = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.3", default-features = false }
-sp-runtime = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.3", default-features = false }
-sp-std = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.3", default-features = false }
+sp-api = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.7", default-features = false }
+sp-runtime = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.7", default-features = false }
+sp-std = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.7", default-features = false }
 
 # Jupiter pallets
 pallet-poa = { path = "../../../poa", default-features = false }

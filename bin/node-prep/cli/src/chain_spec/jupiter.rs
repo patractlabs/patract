@@ -393,26 +393,26 @@ fn testnet_genesis(
     });
 
     GenesisConfig {
-        frame_system: SystemConfig {
+        system: SystemConfig {
             // Add Wasm runtime to storage.
             code: wasm_binary.to_vec(),
             changes_trie_config: Default::default(),
         },
-        pallet_balances: BalancesConfig {
+        balances: BalancesConfig {
             balances: endowed_accounts
                 .iter()
                 .cloned()
                 .map(|x| (x, ENDOWMENT))
                 .collect(),
         },
-        pallet_babe: BabeConfig {
+        babe: BabeConfig {
             authorities: vec![],
             epoch_config: Some(BABE_GENESIS_EPOCH_CONFIG),
         },
-        pallet_grandpa: Default::default(),
-        pallet_im_online: Default::default(),
-        pallet_authority_discovery: AuthorityDiscoveryConfig { keys: vec![] },
-        pallet_session: SessionConfig {
+        grandpa: Default::default(),
+        im_online: Default::default(),
+        authority_discovery: AuthorityDiscoveryConfig { keys: vec![] },
+        session: SessionConfig {
             keys: initial_authorities
                 .iter()
                 .map(|x| {
@@ -424,18 +424,17 @@ fn testnet_genesis(
                 })
                 .collect::<Vec<_>>(),
         },
-        pallet_democracy: Default::default(),
-        pallet_collective_Instance1: CouncilConfig {
+        council: CouncilConfig {
             members: vec![],
             phantom: Default::default(),
         },
-        pallet_collective_Instance2: TechnicalCommitteeConfig {
+        technical_committee: TechnicalCommitteeConfig {
             members: vec![],
             phantom: Default::default(),
         },
-        pallet_membership_Instance1: Default::default(),
-        pallet_sudo: SudoConfig { key: root_key },
-        pallet_poa: PoAConfig {
+        technical_membership: Default::default(),
+        sudo: SudoConfig { key: root_key },
+        po_a: PoAConfig {
             minimum_authority_count: initial_authorities.len() as u32,
             init_authorities: initial_authorities
                 .iter()

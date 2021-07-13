@@ -10,11 +10,12 @@ hex = { version = "0.4.3", default-features = false, features = ["alloc"] }
 log = { version = "0.4", default-features = false }
 
 # Substrate primitives
-sp-runtime = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.3", default-features = false }
-sp-std = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.3", default-features = false }
+sp-runtime = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.7", default-features = false }
+sp-std = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.7", default-features = false }
 
 # Substrate pallets
-pallet-contracts = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.3", default-features = false }
+frame-support = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.7", default-features = false }
+pallet-contracts = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.7", default-features = false }
 
 # zkMega
 curve = { package = "zkmega-arkworks", git = "https://github.com/patractlabs/zkmega.git", branch = "master", default-features = false }
@@ -32,6 +33,7 @@ std = [
   "sp-runtime/std",
   "sp-std/std",
 
+  "frame-support/std",
   "pallet-contracts/std",
 
   "jupiter-io/std",

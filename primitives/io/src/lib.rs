@@ -19,87 +19,88 @@ pub trait Pairing {
         false
     }
 
-    fn call(func_id: u32, input: &[u8]) -> Option<Vec<u8>> {
-        curve::call(func_id, input).ok()
+    fn call(_func_id: u32, _input: &[u8]) -> Option<Vec<u8>> {
+        // curve::call(func_id, input).ok()
+        None
     }
 
     fn bls12_377_add() {
-        curve::tests::add(0x2a);
+        // curve::tests::add(0x2a);
     }
 
     fn bls12_377_mul() {
-        curve::tests::mul(0x2a);
+        // curve::tests::mul(0x2a);
     }
 
     fn bls12_377_pairing_two() {
-        curve::tests::pairing(0x2a);
+        // curve::tests::pairing(0x2a);
     }
 
     fn bls12_377_pairing_six() {
-        curve::tests::pairing_six(0x2a);
+        // curve::tests::pairing_six(0x2a);
     }
 
     fn bls12_377_verify() {
-        curve::tests::verify(0x2a);
+        // curve::tests::verify(0x2a);
     }
 
     fn bls12_381_add() {
-        curve::tests::add(0x2b);
+        // curve::tests::add(0x2b);
     }
 
     fn bls12_381_mul() {
-        curve::tests::mul(0x2b);
+        // curve::tests::mul(0x2b);
     }
 
     fn bls12_381_pairing_two() {
-        curve::tests::pairing(0x2b);
+        // curve::tests::pairing(0x2b);
     }
 
     fn bls12_381_pairing_six() {
-        curve::tests::pairing_six(0x2b);
+        // curve::tests::pairing_six(0x2b);
     }
 
     fn bls12_381_verify() {
-        curve::tests::verify(0x2b);
+        // curve::tests::verify(0x2b);
     }
 
     fn bn254_add() {
-        curve::tests::add(0x2c);
+        // curve::tests::add(0x2c);
     }
 
     fn bn254_mul() {
-        curve::tests::mul(0x2c);
+        // curve::tests::mul(0x2c);
     }
 
     fn bn254_pairing_two() {
-        curve::tests::pairing(0x2c);
+        // curve::tests::pairing(0x2c);
     }
 
     fn bn254_pairing_six() {
-        curve::tests::pairing_six(0x2c);
+        // curve::tests::pairing_six(0x2c);
     }
 
     fn bn254_verify() {
-        curve::tests::verify(0x2c);
+        // curve::tests::verify(0x2c);
     }
 
     fn bw6_761_add() {
-        curve::tests::add(0x2d);
+        // curve::tests::add(0x2d);
     }
 
     fn bw6_761_mul() {
-        curve::tests::mul(0x2d);
+        // curve::tests::mul(0x2d);
     }
 
     fn bw6_761_pairing_two() {
-        curve::tests::pairing(0x2d);
+        // curve::tests::pairing(0x2d);
     }
 
     fn bw6_761_pairing_six() {
-        curve::tests::pairing_six(0x2d);
+        // curve::tests::pairing_six(0x2d);
     }
 
     fn bw6_761_verify() {
-        curve::tests::verify(0x2d);
+        // curve::tests::verify(0x2d);
     }
 }

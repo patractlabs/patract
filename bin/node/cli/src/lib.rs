@@ -1,8 +1,9 @@
 //! Jupiter CLI library.
 
-#![warn(missing_docs)]
+// #![warn(missing_docs)]
 #![warn(unused_extern_crates)]
 
+/// jupiter para chain configurations.
 pub mod chain_spec;
 #[macro_use]
 mod service;

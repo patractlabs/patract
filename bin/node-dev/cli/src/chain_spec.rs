@@ -88,12 +88,12 @@ fn testnet_genesis(
     endowed_accounts: Vec<AccountId>,
 ) -> GenesisConfig {
     GenesisConfig {
-        frame_system: SystemConfig {
+        system: SystemConfig {
             // Add Wasm runtime to storage.
             code: wasm_binary.to_vec(),
             changes_trie_config: Default::default(),
         },
-        pallet_balances: BalancesConfig {
+        balances: BalancesConfig {
             // Configure endowed accounts with initial balance of 1 << 60.
             balances: endowed_accounts
                 .iter()
@@ -101,8 +101,8 @@ fn testnet_genesis(
                 .map(|k| (k, 1 << 60))
                 .collect(),
         },
-        pallet_indices: IndicesConfig { indices: vec![] },
-        pallet_sudo: SudoConfig {
+        indices: IndicesConfig { indices: vec![] },
+        sudo: SudoConfig {
             // Assign network admin rights.
             key: root_key,
         },

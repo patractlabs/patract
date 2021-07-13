@@ -9,4 +9,4 @@ description = ""
 cli = { package = "jupiter-para-cli", path = "cli" }
 
 [target.'cfg(target_arch="x86_64")'.dependencies]
-cli = { package = "jupiter-para-cli", path = "cli", features = ["wasmtime"] }
+cli = { package = "jupiter-para-cli", path = "cli", features = [ "wasmtime" ] }

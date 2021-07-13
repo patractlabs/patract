@@ -1,0 +1,39 @@
+[package]
+name = "randomness_collect"
+version = "0.1.0"
+authors = ["Jupiter <https://github.com/patractlabs/jupiter>"]
+edition = "2018"
+
+[dependencies]
+codec = { version = "2.0.0", package = "parity-scale-codec", default-features = false }
+hex = { version = "0.4.2", default-features = false, features = ["alloc"] }
+lite-json = { version = "0.1", default-features = false }
+log = { version = "0.4.14", default-features = false }
+
+frame-system = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.7", default-features = false }
+frame-support = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.7", default-features = false }
+sp-consensus-vrf = { version = "0.9.0", git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.7", default-features = false }
+sp-consensus-babe = { version = "0.9.0", git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.7", default-features = false }
+sp-std = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.7",default-features = false }
+sp-io = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.7",default-features = false }
+sp-runtime = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.7",default-features = false }
+sp-core = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.7",default-features = false }
+sp-application-crypto = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.7",default-features = false }
+
+[features]
+default = ["std"]
+std = [
+    "codec/std",
+    "hex/std",
+    "lite-json/std",
+    "log/std",
+
+    "frame-support/std",
+    "sp-consensus-vrf/std",
+    "sp-consensus-babe/std",
+    "sp-std/std",
+    "sp-io/std",
+    "sp-runtime/std",
+    "sp-core/std",
+    "sp-application-crypto/std",
+]
